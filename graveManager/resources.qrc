@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/account-search.svg</file>
+    <file>icons/account-multiple-plus.svg</file>
+  </qresource>
+</RCC>

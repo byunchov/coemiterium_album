@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1340</width>
+    <height>829</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Coemeterium Album - Софтуер за гробищни паркове</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>1050</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Резултат</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <item>
+        <widget class="QTableWidget" name="results_table">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustIgnored</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>Зона</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Сектор</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ред</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Колона</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Име (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Фамилия (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ЕГН (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Роден на</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Починал на</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ИД Токен</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Име (С)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Фамилия(С)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ЕГН (С)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>От</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>До</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>250</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Търсене по поле</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Починал</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QFormLayout" name="formLayout_5">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMinimumSize</enum>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Име</string>
+              </property>
+              <property name="buddy">
+               <cstring>dead_fname</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="dead_fname">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>Фамилия</string>
+              </property>
+              <property name="buddy">
+               <cstring>dead_lname</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="dead_lname">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>ЕГН</string>
+              </property>
+              <property name="buddy">
+               <cstring>dead_egn</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="dead_egn">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="btn_dead_clr">
+              <property name="text">
+               <string>Изчисти</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_dead_find">
+              <property name="text">
+               <string>Намери</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string>Местоположение</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <layout class="QFormLayout" name="formLayout_2">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>Зона</string>
+                </property>
+                <property name="buddy">
+                 <cstring>cb_zone</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="cb_zone"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>Ред</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tb_row</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="tb_row"/>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QFormLayout" name="formLayout_4">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Сектор</string>
+                </property>
+                <property name="buddy">
+                 <cstring>cb_sector</cstring>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="cb_sector"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="tb_col"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Колона</string>
+                </property>
+                <property name="buddy">
+                 <cstring>tb_col</cstring>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QPushButton" name="btn_site_clr">
+              <property name="text">
+               <string>Изчисти</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_site_find">
+              <property name="text">
+               <string>Намери</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string>Данни за ползвател</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Име</string>
+              </property>
+              <property name="buddy">
+               <cstring>owner_fname</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="owner_fname"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Фамилия</string>
+              </property>
+              <property name="buddy">
+               <cstring>owner_lname</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="owner_lname"/>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>ЕГН</string>
+              </property>
+              <property name="buddy">
+               <cstring>owner_egn</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="owner_egn"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QPushButton" name="btn_owner_clr">
+              <property name="text">
+               <string>Изчисти</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_owner_find">
+              <property name="text">
+               <string>Намери</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1340</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAdd_owner"/>
+   <addaction name="actionAdd_deceased"/>
+   <addaction name="actionAdd_grave"/>
+  </widget>
+  <action name="actionAdd_grave">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/account-multiple-plus.svg</normaloff>:/icons/icons/account-multiple-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Заемане на гробно място</string>
+   </property>
+   <property name="toolTip">
+    <string>Заемане на гробно място</string>
+   </property>
+  </action>
+  <action name="actionAdd_owner">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/account-multiple-plus.svg</normaloff>:/icons/icons/account-multiple-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Добавяне на собственик</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавяне на собственик</string>
+   </property>
+  </action>
+  <action name="actionAdd_deceased">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/account-multiple-plus.svg</normaloff>:/icons/icons/account-multiple-plus.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Добавяне на починал</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавяне на починал</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

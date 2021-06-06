@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ListDeadWindow</class>
+ <widget class="QMainWindow" name="ListDeadWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1018</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Списък с починали</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Търсене по поле</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Име</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="dead_fname"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Фамилия</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="dead_lname"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>ЕГН</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="dead_egn"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_find">
+         <property name="text">
+          <string>Търсене</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>1000</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Резултат</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+       <item>
+        <widget class="QTableWidget" name="results_table">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <column>
+          <property name="text">
+           <string>Зона</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Сектор</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ред</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Колона</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Име (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Фамилия (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ЕГН (П)</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Роден на</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Починал на</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ИД Нотификатор</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
